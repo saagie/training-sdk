@@ -1,0 +1,25 @@
+version: v1
+type: APP
+id: flask-api
+label: Flask API
+baseline: "This is my baseline"
+description: "And this is a more exhaustive descrption"
+available: true
+icon: generic-app
+backgroundColor: "#FF33A5"
+customFlags: []
+contexts:
+  - id: api-sdk
+    label: Flask Demo for SDK
+    releaseNotes: "This is the first release"
+    available: true
+    trustLevel: experimental
+    ports:
+      - port: 5000
+        name: flask
+        rewriteUrl: true
+        basePath: SAAGIE_BASE_PATH
+    volumes: []
+    dockerInfo:
+      image: saagie/training-sdk-flask
+      version: 1.0
